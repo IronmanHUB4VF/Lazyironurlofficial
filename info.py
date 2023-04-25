@@ -45,8 +45,8 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'LazyPrincessSupport')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "⚡<b>File uploaded by [Movies Adaa™](https://t.me/real_MoviesAdda2)</b>⚡\n\nName: {file_caption} \n\n⚙️ <b>Size: </b><code>{file_size}</code>🔥  ↭ <b>Join Now [MoviesAdda™](https://t.me/real_MoviesAdda2)</b> ↭  🔥")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "⚡<b>File uploaded by [Movies Adaa™](https://t.me/real_MoviesAdda2)</b>⚡\n\nName: {file_caption} \n\n⚙️ <b>Size: </b><code>{file_size}</code>🔥  ↭ <b>Join Now [MoviesAdda™](https://t.me/real_MoviesAdda2)</b> ↭  🔥")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "⚡<b>File uploaded by @HUB4VF</b>⚡\n\n🎦 <b>File Name: </b> ➥  <i>{file_caption}</i>\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n                ❤️<b>WE LOVE YOU</b>❤️\n🔥  ↭ <b>Join Now @HUB4VF</b> ↭  🔥")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "⚡<b>File uploaded by @HUB4VF</b>⚡\n\n🎦 <b>File Name: </b> ➥  <i>{file_caption}</i>\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n                ❤️<b>WE LOVE YOU</b>❤️\n🔥  ↭ <b>Join Now @HUB4VF</b> ↭  🔥")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n‌‌‌‌IMDb: \n\n🏷 Title: {title}\n🌟 Rating : {rating}/10\n🎭 Genres: {genres}\n📆 Year: {year}\n⏰ Duration : {runtime}\n🎙️ Languages : {languages}\n🔖 Plot : {plot}\n\n♥️ we are nothing without you ♥️ \n\n💛 Please Share Us 💛\n\n⚠️Click on the button 👇 below to get your query privately")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), False)
@@ -73,7 +73,7 @@ LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
 # Only Give Value in LAZY_RENAMERS if you have enabled LAZY_MODE ----- !
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL'))
 #   REQ_CHANNEL is for the logs of that content name which is not found in group -- !
-URL_MODE = is_enabled((environ.get("URL_MODE")), True)
+URL_MODE = is_enabled((environ.get("URL_MODE")), False)
 # Use True false in url mode => Set value true if you want shortlinks - else - use value False ----- !
 
 # URL Shortener
@@ -88,11 +88,11 @@ if SELF_DELETE == "True":
 
 # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/LazyDeveloper"
+DOWNLOAD_TEXT_URL = "https://t.me/HelpHUB4VF"
 
 # Custom Caption Under Button #
 CAPTION_BUTTON = "Get Updates"
-CAPTION_BUTTON_URL = "https://t.me/LazyDeveloper"
+CAPTION_BUTTON_URL = "https://t.me/HUB4VF"
 
 # _______________________________________________________________________________________________________________ #
 # __________________________________________Credit_______________________________________________________________ #
