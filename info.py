@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'LazyPrincess')
 API_ID = int(environ.get('API_ID', '24736263'))
 API_HASH = environ.get('API_HASH', '4d53732917b73a6bb89c3b2f2f7b0902')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6294506492:AAELPTUSQA0bcg-JjRGmM93pzF0XaLh_-rY")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6294506492:AAHWWWbk1TmdFCvLDGcHRgPJrpyoHEDwoYU")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -30,13 +30,13 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1228255863 5257925921').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '-1001685314725')
-auth_grp = environ.get('AUTH_GROUP')
+auth_grp = environ.get('AUTH_GROUP', None)
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Lazyiron:bhargavp1937@cluster7.31obcsb.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster7")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
@@ -66,19 +66,19 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True
 #LazyRenamer Configs
 FLOOD = int(environ.get("FLOOD", "10"))
 # FLOOD is for renaming files -> set value in [seconds] in this field ! ex : for 30 seconds use 30 --\\ for 1 minute use 60 -------- ! 
-LAZY_MODE = bool(environ.get("LAZY_MODE"))
+LAZY_MODE = bool(environ.get("LAZY_MODE", False))
 #Add user id of the user in this field those who you want to be Authentic user for file renaming features --------- !
-lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '').split()]
+lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '1228255863 5257925921').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
 # Only Give Value in LAZY_RENAMERS if you have enabled LAZY_MODE ----- !
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL', '-1001968931458'))
 #   REQ_CHANNEL is for the logs of that content name which is not found in group -- !
-URL_MODE = is_enabled((environ.get("URL_MODE")), False)
+URL_MODE = is_enabled((environ.get("URL_MODE", False)), False)
 # Use True false in url mode => Set value true if you want shortlinks - else - use value False ----- !
 
 # URL Shortener
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'shorturllink.in')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '749cbd2f85f514907d7f133361262bed557ae947')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'omegalinks.in')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '1c68341ce1ff1858a7e82f00812898da69d44a0c')
 
 # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 300))
